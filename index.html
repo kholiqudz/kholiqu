@@ -1,205 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kholiqu Darul Portfolio</title>
+<!-- SECTION YANG SUDAH DIPELAJARI -->
+<section class="skills-section">
+  <h1 class="title">Yang Sudah Dipelajari</h1>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <div class="card glow">
+    <h2>🌐 Networking</h2>
+    <p>
+      Mempelajari dasar hingga menengah jaringan komputer seperti 
+      IP Address, Subnetting, Routing, Switching, konfigurasi Mikrotik, 
+      serta memahami cara kerja komunikasi antar perangkat dalam jaringan.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🐧 Linux</h2>
+    <p>
+      Memahami penggunaan sistem operasi Linux untuk administrasi server, 
+      manajemen file, konfigurasi user, permission, serta penggunaan command line.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>⚡ Web Server</h2>
+    <p>
+      Mempelajari cara membangun dan mengelola web server menggunakan Apache 
+      dan Nginx, termasuk hosting website, virtual host, dan optimasi server.
+    </p>
+  </div>
+
+  <div class="github-box">
+    <a href="https://github.com/kholiqudarul" target="_blank">
+      🚀 Kunjungi GitHub Saya
+    </a>
+  </div>
+</section>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#020b2d;
+  background: radial-gradient(circle at top,#0d1b52,#020617);
   color:white;
-  overflow-x:hidden;
 }
 
-/* HERO */
+.skills-section{
+  padding:50px 20px;
+  max-width:900px;
+  margin:auto;
+}
 
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+.title{
   text-align:center;
-  background:
-  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),
-  radial-gradient(circle at top,#112b70,#020b2d);
-}
-
-.hero h1{
-  font-size:70px;
+  font-size:48px;
   font-weight:700;
-}
-
-.hero span{
-  color:#00e1ff;
-}
-
-.hero p{
-  margin-top:15px;
-  font-size:22px;
-  color:#d6d6d6;
-}
-
-.btn{
-  margin-top:30px;
-  padding:15px 35px;
-  border:none;
-  border-radius:40px;
-  background:#00e1ff;
-  color:#000;
-  font-size:18px;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 25px #00e1ff;
-}
-
-/* SKILLS */
-
-.skills{
-  padding:80px 20px;
-}
-
-.skills h1{
-  text-align:center;
-  font-size:55px;
-  margin-bottom:50px;
+  margin-bottom:40px;
+  color:white;
 }
 
 .card{
-  max-width:1000px;
-  margin:30px auto;
-  background:linear-gradient(145deg,#13234d,#10162f);
-  border-radius:30px;
-  padding:40px;
-  border:1px solid rgba(255,255,255,0.1);
-  box-shadow:0 0 20px rgba(0,0,0,0.3);
-  transition:0.3s;
+  background:rgba(20,30,60,0.85);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:25px;
+  padding:35px;
+  margin-bottom:30px;
+  backdrop-filter: blur(12px);
+  box-shadow:0 0 20px rgba(0,255,255,0.08);
+  transition:0.4s ease;
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 30px rgba(0,225,255,0.4);
-}
-
-.active{
-  border:2px solid #00e1ff;
-  box-shadow:0 0 30px rgba(0,225,255,0.5);
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 30px #00e5ff;
 }
 
 .card h2{
-  color:#00e1ff;
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:38px;
+  margin-bottom:18px;
+  color:#00e5ff;
 }
 
 .card p{
-  color:#d6d6d6;
+  font-size:19px;
+  line-height:1.9;
+  color:#e5e7eb;
+}
+
+.glow{
+  border:2px solid #00e5ff;
+  box-shadow:0 0 25px rgba(0,229,255,0.4);
+}
+
+.github-box{
+  text-align:center;
+  margin-top:40px;
+}
+
+.github-box a{
+  display:inline-block;
+  padding:18px 40px;
+  background:linear-gradient(135deg,#00e5ff,#0066ff);
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
   font-size:22px;
-  line-height:1.8;
+  font-weight:600;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,229,255,0.4);
 }
 
-/* GITHUB */
-
-.github{
-  text-align:center;
-  padding:80px 20px;
-}
-
-.github h1{
-  font-size:55px;
-  margin-bottom:40px;
-}
-
-.github img{
-  width:90%;
-  max-width:900px;
-  margin:15px 0;
-  border-radius:20px;
-}
-
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#aaa;
+.github-box a:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 35px #00e5ff;
 }
 </style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Hello, I'm <span>Kholiqu Darul</span></h1>
-  <p>Web Developer • Networking • Linux Enthusiast</p>
-
-  <button class="btn">Explore More</button>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-
-  <h1>Yang Sudah Dipelajari</h1>
-
-  <div class="card active">
-    <h2>Networking</h2>
-    <p>
-      Mempelajari dasar hingga menengah jaringan komputer seperti
-      IP Address, Subnetting, Routing, Switching, konfigurasi Mikrotik,
-      serta memahami komunikasi antar perangkat dalam jaringan.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Linux</h2>
-    <p>
-      Memahami penggunaan Linux untuk administrasi server,
-      manajemen file, konfigurasi user, permission,
-      serta command line untuk kebutuhan networking.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Web Server</h2>
-    <p>
-      Mempelajari Apache dan Nginx untuk hosting website,
-      konfigurasi domain, virtual host,
-      dan optimasi performa server.
-    </p>
-  </div>
-
-</section>
-
-<!-- GITHUB -->
-<section class="github">
-  <h1>GitHub Stats</h1>
-
-  <img src="https://github-readme-stats.vercel.app/api?username=kholiqudarul&show_icons=true&theme=tokyonight">
-
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kholiqudarul&layout=compact&theme=tokyonight">
-
-  <img src="https://streak-stats.demolab.com?user=kholiqudarul&theme=tokyonight">
-</section>
-
-<footer>
-  © 2026 Kholiqu Darul • All Rights Reserved
-</footer>
-
-</body>
-</html>
