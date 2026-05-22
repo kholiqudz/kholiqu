@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kholiqu Darul</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Kholiqu Darul Kingdom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,24 +14,23 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Fredoka',sans-serif;
 }
 
 body{
   background:
-  linear-gradient(180deg,#0f172a,#020617);
-  overflow-x:hidden;
+  linear-gradient(180deg,#050816,#0b1020,#020617);
   color:white;
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
 }
 
-/* BACKGROUND */
+/* BACKGROUND STARS */
 body::before{
   content:'';
   position:fixed;
-  width:100%;
-  height:100%;
+  inset:0;
   background-image:
-  radial-gradient(#ffffff44 1px, transparent 1px);
+  radial-gradient(rgba(255,215,0,0.2) 1px, transparent 1px);
   background-size:40px 40px;
   animation:stars 20s linear infinite;
   z-index:-1;
@@ -56,17 +56,12 @@ body::before{
 /* HEADER */
 .header{
   text-align:center;
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
-.avatar{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  border:5px solid #00e5ff;
-  box-shadow:
-  0 0 25px #00e5ff,
-  0 0 60px #00e5ff55;
+.crown{
+  font-size:60px;
+  margin-bottom:10px;
   animation:float 4s ease-in-out infinite;
 }
 
@@ -75,108 +70,140 @@ body::before{
     transform:translateY(0);
   }
   50%{
-    transform:translateY(-12px);
+    transform:translateY(-10px);
   }
+}
+
+.header img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:5px solid gold;
+  object-fit:cover;
+
+  box-shadow:
+  0 0 25px gold,
+  0 0 60px rgba(255,215,0,0.4);
 }
 
 .header h1{
   margin-top:20px;
-  font-size:38px;
-  color:white;
-  text-shadow:0 0 15px #00e5ff;
+  font-size:40px;
+  color:#FFD700;
+  font-family:'Cinzel',serif;
+  text-shadow:0 0 20px rgba(255,215,0,0.5);
 }
 
 .header p{
-  margin-top:10px;
-  color:#cbd5e1;
-  font-size:17px;
+  margin-top:12px;
+  color:#d1d5db;
+  font-size:16px;
+  line-height:1.8;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.title h2{
+  font-size:50px;
+  line-height:1.2;
+  color:white;
+  font-weight:700;
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.07);
-  border:2px solid rgba(255,255,255,0.08);
-  border-radius:30px;
-  padding:25px;
-  margin-bottom:25px;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.05),
+    rgba(255,215,0,0.04)
+  );
+
+  border:2px solid rgba(255,215,0,0.15);
+
+  border-radius:35px;
+
+  padding:30px;
+
+  margin-bottom:28px;
+
   backdrop-filter:blur(10px);
-  box-shadow:0 0 20px rgba(0,255,255,0.12);
+
+  box-shadow:
+  0 0 20px rgba(255,215,0,0.08);
+
   transition:0.4s;
 }
 
 .card:hover{
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 0 30px #00e5ff;
+  transform:translateY(-8px);
+  box-shadow:
+  0 0 30px rgba(255,215,0,0.3);
 }
 
-.icon{
-  font-size:42px;
-  margin-bottom:12px;
-}
-
-.card h2{
+.card h3{
+  font-size:34px;
   color:#00e5ff;
-  font-size:30px;
-  margin-bottom:15px;
+  margin-bottom:18px;
+  font-family:'Cinzel',serif;
 }
 
 .card p{
-  color:#e2e8f0;
-  line-height:1.8;
+  color:#e5e7eb;
+  line-height:1.9;
   font-size:16px;
 }
 
 /* GITHUB BUTTON */
-.github{
+.github-btn{
   margin-top:35px;
-  text-align:center;
 }
 
-.github a{
+.github-btn a{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:12px;
+
   text-decoration:none;
+
   background:
-  linear-gradient(135deg,#00e5ff,#2563eb);
+  linear-gradient(135deg,#FFD700,#b8860b);
+
+  color:#111827;
+
   padding:18px;
+
   border-radius:60px;
-  color:white;
+
   font-size:22px;
-  font-weight:600;
-  box-shadow:0 0 25px rgba(0,229,255,0.4);
+
+  font-weight:700;
+
+  font-family:'Cinzel',serif;
+
+  box-shadow:
+  0 0 25px rgba(255,215,0,0.4);
+
   transition:0.4s;
 }
 
-.github a:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 40px #00e5ff;
+.github-btn a:hover{
+  transform:scale(1.05);
+  box-shadow:
+  0 0 40px rgba(255,215,0,0.7);
 }
 
 /* FOOTER */
 .footer{
   margin-top:30px;
   text-align:center;
-  color:#94a3b8;
-  font-size:15px;
-}
-
-/* CLOUD */
-.cloud{
-  position:absolute;
-  width:120px;
-  opacity:0.15;
-}
-
-.cloud1{
-  top:80px;
-  left:-20px;
-}
-
-.cloud2{
-  bottom:100px;
-  right:-20px;
+  color:#9ca3af;
+  font-size:14px;
 }
 
 </style>
@@ -188,73 +215,76 @@ body::before{
   <!-- HEADER -->
   <div class="header">
 
-    <img 
-      src="https://github.com/kholiqudarul.png" 
-      class="avatar"
-    >
+    <div class="crown">👑</div>
+
+    <img src="https://github.com/kholiqudarul.png">
 
     <h1>KHOLIQU DARUL</h1>
 
     <p>
-      🚀 Student TKJ • Networking • Linux • Web Server
+      ⚔️ The Young Kingdom Of Technology ⚔️ <br>
+      Networking • Linux • Web Server • Cyber Security
     </p>
 
   </div>
 
-  <!-- CARD 1 -->
+  <!-- TITLE -->
+  <div class="title">
+    <h2>Yang Sudah <br> Dipelajari</h2>
+  </div>
+
+  <!-- NETWORKING -->
   <div class="card">
 
-    <div class="icon">🌐</div>
-
-    <h2>Networking</h2>
+    <h3>🌐 Networking</h3>
 
     <p>
-      Belajar IP Address, Routing, Switching, Subnetting,
-      Mikrotik, dan komunikasi jaringan komputer.
+      Mempelajari dasar hingga menengah jaringan komputer
+      seperti IP Address, Subnetting, Routing, Switching,
+      konfigurasi Mikrotik, serta memahami komunikasi
+      antar perangkat dalam jaringan.
     </p>
 
   </div>
 
-  <!-- CARD 2 -->
+  <!-- LINUX -->
   <div class="card">
 
-    <div class="icon">🐧</div>
-
-    <h2>Linux</h2>
+    <h3>🐧 Linux</h3>
 
     <p>
-      Memahami command Linux, administrasi server,
-      permission, dan manajemen file.
+      Memahami penggunaan Linux untuk administrasi server,
+      manajemen file, konfigurasi user, permission,
+      serta penggunaan command line untuk kebutuhan server.
     </p>
 
   </div>
 
-  <!-- CARD 3 -->
+  <!-- WEB SERVER -->
   <div class="card">
 
-    <div class="icon">⚡</div>
-
-    <h2>Web Server</h2>
+    <h3>⚡ Web Server</h3>
 
     <p>
-      Belajar Apache, Nginx, hosting website,
-      virtual host, dan optimasi server.
+      Mempelajari cara membangun dan mengelola web server
+      menggunakan Apache dan Nginx, termasuk hosting website,
+      virtual host, domain, dan optimasi server.
     </p>
 
   </div>
 
-  <!-- GITHUB -->
-  <div class="github">
+  <!-- BUTTON -->
+  <div class="github-btn">
 
     <a href="https://github.com/kholiqudarul" target="_blank">
-      🎮 Visit My GitHub
+      👑 Visit My Kingdom
     </a>
 
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    Made With 💙 By Kholiqu Darul
+    Royal Developer • Kholiqu Darul 👑
   </div>
 
 </div>
