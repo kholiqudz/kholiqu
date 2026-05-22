@@ -1,35 +1,13 @@
-<!-- KARTUN GITHUB PROFILE -->
-<section class="cartoon-section">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kholiqu Darul</title>
 
-  <div class="stars"></div>
-
-  <div class="profile-card">
-
-    <div class="avatar-wrap">
-      <img src="https://github.com/kholiqudarul.png" class="avatar">
-    </div>
-
-    <h1>KHOLIQU DARUL</h1>
-
-    <div class="role">
-      🌐 Networking • 🐧 Linux • ⚡ Web Server
-    </div>
-
-    <p>
-      Anak TKJ yang suka dunia networking, linux, server, 
-      dan teknologi keren 🚀
-    </p>
-
-    <a href="https://github.com/kholiqudarul" target="_blank">
-      🎮 Visit My GitHub
-    </a>
-
-  </div>
-
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 
 *{
   margin:0;
@@ -39,25 +17,26 @@
 }
 
 body{
-  min-height:100vh;
   background:
-  linear-gradient(180deg,#1e3a8a,#0f172a);
-  overflow:hidden;
+  linear-gradient(180deg,#0f172a,#020617);
+  overflow-x:hidden;
+  color:white;
 }
 
-/* BINTANG */
-.stars{
-  position:absolute;
+/* BACKGROUND */
+body::before{
+  content:'';
+  position:fixed;
   width:100%;
   height:100%;
   background-image:
-  radial-gradient(white 1px, transparent 1px);
+  radial-gradient(#ffffff44 1px, transparent 1px);
   background-size:40px 40px;
-  opacity:0.2;
-  animation:move 20s linear infinite;
+  animation:stars 20s linear infinite;
+  z-index:-1;
 }
 
-@keyframes move{
+@keyframes stars{
   from{
     transform:translateY(0);
   }
@@ -66,105 +45,219 @@ body{
   }
 }
 
-.cartoon-section{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  padding:20px;
-  position:relative;
+/* CONTAINER */
+.container{
+  width:100%;
+  max-width:430px;
+  margin:auto;
+  padding:25px;
 }
 
-.profile-card{
-  width:380px;
-  background:rgba(255,255,255,0.08);
-  border:3px solid rgba(255,255,255,0.2);
-  backdrop-filter:blur(10px);
-  border-radius:35px;
-  padding:40px 30px;
+/* HEADER */
+.header{
   text-align:center;
+  margin-bottom:35px;
+}
+
+.avatar{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:5px solid #00e5ff;
   box-shadow:
-  0 0 25px rgba(0,255,255,0.3),
-  inset 0 0 20px rgba(255,255,255,0.05);
-  position:relative;
-  z-index:2;
+  0 0 25px #00e5ff,
+  0 0 60px #00e5ff55;
   animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-  0%{
-    transform:translateY(0px);
+  0%,100%{
+    transform:translateY(0);
   }
   50%{
     transform:translateY(-12px);
   }
-  100%{
-    transform:translateY(0px);
-  }
 }
 
-.avatar-wrap{
-  width:150px;
-  height:150px;
-  margin:auto;
-  border-radius:50%;
-  padding:6px;
-  background:
-  linear-gradient(135deg,#00e5ff,#00ff99,#00e5ff);
-  animation:spin 6s linear infinite;
-}
-
-@keyframes spin{
-  100%{
-    transform:rotate(360deg);
-  }
-}
-
-.avatar{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-  border:5px solid #0f172a;
-}
-
-.profile-card h1{
-  margin-top:25px;
+.header h1{
+  margin-top:20px;
+  font-size:38px;
   color:white;
-  font-size:34px;
   text-shadow:0 0 15px #00e5ff;
 }
 
-.role{
-  margin-top:15px;
-  color:#7dd3fc;
-  font-size:18px;
+.header p{
+  margin-top:10px;
+  color:#cbd5e1;
+  font-size:17px;
 }
 
-.profile-card p{
-  margin-top:20px;
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.07);
+  border:2px solid rgba(255,255,255,0.08);
+  border-radius:30px;
+  padding:25px;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(0,255,255,0.12);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 0 30px #00e5ff;
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.card h2{
+  color:#00e5ff;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.card p{
   color:#e2e8f0;
   line-height:1.8;
   font-size:16px;
 }
 
-.profile-card a{
-  display:inline-block;
-  margin-top:28px;
-  padding:16px 35px;
-  border-radius:50px;
-  background:
-  linear-gradient(135deg,#00e5ff,#2563eb);
-  color:white;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:600;
-  transition:0.4s;
-  box-shadow:0 0 20px rgba(0,229,255,0.5);
+/* GITHUB BUTTON */
+.github{
+  margin-top:35px;
+  text-align:center;
 }
 
-.profile-card a:hover{
-  transform:scale(1.1) rotate(-2deg);
-  box-shadow:0 0 35px #00e5ff;
+.github a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-decoration:none;
+  background:
+  linear-gradient(135deg,#00e5ff,#2563eb);
+  padding:18px;
+  border-radius:60px;
+  color:white;
+  font-size:22px;
+  font-weight:600;
+  box-shadow:0 0 25px rgba(0,229,255,0.4);
+  transition:0.4s;
 }
+
+.github a:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 40px #00e5ff;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:30px;
+  text-align:center;
+  color:#94a3b8;
+  font-size:15px;
+}
+
+/* CLOUD */
+.cloud{
+  position:absolute;
+  width:120px;
+  opacity:0.15;
+}
+
+.cloud1{
+  top:80px;
+  left:-20px;
+}
+
+.cloud2{
+  bottom:100px;
+  right:-20px;
+}
+
 </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <img 
+      src="https://github.com/kholiqudarul.png" 
+      class="avatar"
+    >
+
+    <h1>KHOLIQU DARUL</h1>
+
+    <p>
+      🚀 Student TKJ • Networking • Linux • Web Server
+    </p>
+
+  </div>
+
+  <!-- CARD 1 -->
+  <div class="card">
+
+    <div class="icon">🌐</div>
+
+    <h2>Networking</h2>
+
+    <p>
+      Belajar IP Address, Routing, Switching, Subnetting,
+      Mikrotik, dan komunikasi jaringan komputer.
+    </p>
+
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card">
+
+    <div class="icon">🐧</div>
+
+    <h2>Linux</h2>
+
+    <p>
+      Memahami command Linux, administrasi server,
+      permission, dan manajemen file.
+    </p>
+
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card">
+
+    <div class="icon">⚡</div>
+
+    <h2>Web Server</h2>
+
+    <p>
+      Belajar Apache, Nginx, hosting website,
+      virtual host, dan optimasi server.
+    </p>
+
+  </div>
+
+  <!-- GITHUB -->
+  <div class="github">
+
+    <a href="https://github.com/kholiqudarul" target="_blank">
+      🎮 Visit My GitHub
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Made With 💙 By Kholiqu Darul
+  </div>
+
+</div>
+
+</body>
+</html>
