@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kholiqu Darul Kingdom</title>
+<title>Kholiqu Darul</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,34 +14,38 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
   background:
-  linear-gradient(180deg,#050816,#0b1020,#020617);
+  linear-gradient(180deg,#020617,#000000,#020617);
   color:white;
   overflow-x:hidden;
-  font-family:'Poppins',sans-serif;
 }
 
-/* BACKGROUND STARS */
+/* BACKGROUND EFFECT */
 body::before{
   content:'';
   position:fixed;
   inset:0;
+
   background-image:
-  radial-gradient(rgba(255,215,0,0.2) 1px, transparent 1px);
-  background-size:40px 40px;
-  animation:stars 20s linear infinite;
+  radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+
+  background-size:35px 35px;
+
+  animation:bg 15s linear infinite;
+
   z-index:-1;
 }
 
-@keyframes stars{
+@keyframes bg{
   from{
     transform:translateY(0);
   }
   to{
-    transform:translateY(40px);
+    transform:translateY(35px);
   }
 }
 
@@ -53,15 +57,24 @@ body::before{
   padding:25px;
 }
 
-/* HEADER */
-.header{
+/* PROFILE */
+.profile{
   text-align:center;
-  margin-bottom:40px;
+  margin-bottom:45px;
 }
 
-.crown{
-  font-size:60px;
-  margin-bottom:10px;
+.profile img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+
+  border:4px solid #00e5ff;
+
+  box-shadow:
+  0 0 20px #00e5ff,
+  0 0 60px rgba(0,229,255,0.4);
+
   animation:float 4s ease-in-out infinite;
 }
 
@@ -74,29 +87,20 @@ body::before{
   }
 }
 
-.header img{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  border:5px solid gold;
-  object-fit:cover;
-
-  box-shadow:
-  0 0 25px gold,
-  0 0 60px rgba(255,215,0,0.4);
-}
-
-.header h1{
+.profile h1{
   margin-top:20px;
-  font-size:40px;
-  color:#FFD700;
-  font-family:'Cinzel',serif;
-  text-shadow:0 0 20px rgba(255,215,0,0.5);
+  font-size:42px;
+  font-weight:700;
+
+  color:white;
+
+  text-shadow:
+  0 0 15px #00e5ff;
 }
 
-.header p{
+.profile p{
   margin-top:12px;
-  color:#d1d5db;
+  color:#94a3b8;
   font-size:16px;
   line-height:1.8;
 }
@@ -108,9 +112,8 @@ body::before{
 }
 
 .title h2{
-  font-size:50px;
+  font-size:54px;
   line-height:1.2;
-  color:white;
   font-weight:700;
 }
 
@@ -119,13 +122,13 @@ body::before{
   background:
   linear-gradient(
     135deg,
-    rgba(255,255,255,0.05),
-    rgba(255,215,0,0.04)
+    rgba(255,255,255,0.03),
+    rgba(0,229,255,0.04)
   );
 
-  border:2px solid rgba(255,215,0,0.15);
+  border:1px solid rgba(255,255,255,0.08);
 
-  border-radius:35px;
+  border-radius:30px;
 
   padding:30px;
 
@@ -134,75 +137,38 @@ body::before{
   backdrop-filter:blur(10px);
 
   box-shadow:
-  0 0 20px rgba(255,215,0,0.08);
+  0 0 20px rgba(0,229,255,0.08);
 
   transition:0.4s;
 }
 
 .card:hover{
   transform:translateY(-8px);
+
+  border:1px solid #00e5ff;
+
   box-shadow:
-  0 0 30px rgba(255,215,0,0.3);
+  0 0 30px rgba(0,229,255,0.3);
 }
 
 .card h3{
-  font-size:34px;
   color:#00e5ff;
+  font-size:34px;
   margin-bottom:18px;
-  font-family:'Cinzel',serif;
+  font-weight:700;
 }
 
 .card p{
-  color:#e5e7eb;
+  color:#e2e8f0;
   line-height:1.9;
   font-size:16px;
 }
 
-/* GITHUB BUTTON */
-.github-btn{
-  margin-top:35px;
-}
-
-.github-btn a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-
-  text-decoration:none;
-
-  background:
-  linear-gradient(135deg,#FFD700,#b8860b);
-
-  color:#111827;
-
-  padding:18px;
-
-  border-radius:60px;
-
-  font-size:22px;
-
-  font-weight:700;
-
-  font-family:'Cinzel',serif;
-
-  box-shadow:
-  0 0 25px rgba(255,215,0,0.4);
-
-  transition:0.4s;
-}
-
-.github-btn a:hover{
-  transform:scale(1.05);
-  box-shadow:
-  0 0 40px rgba(255,215,0,0.7);
-}
-
 /* FOOTER */
 .footer{
-  margin-top:30px;
   text-align:center;
-  color:#9ca3af;
+  margin-top:25px;
+  color:#64748b;
   font-size:14px;
 }
 
@@ -212,25 +178,27 @@ body::before{
 
 <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-
-    <div class="crown">👑</div>
+  <!-- PROFILE -->
+  <div class="profile">
 
     <img src="https://github.com/kholiqudarul.png">
 
     <h1>KHOLIQU DARUL</h1>
 
     <p>
-      ⚔️ The Young Kingdom Of Technology ⚔️ <br>
-      Networking • Linux • Web Server • Cyber Security
+      ⚡ Networking • Linux • Web Server • Cyber Security ⚡
     </p>
 
   </div>
 
   <!-- TITLE -->
   <div class="title">
-    <h2>Yang Sudah <br> Dipelajari</h2>
+
+    <h2>
+      Yang Sudah <br>
+      Dipelajari
+    </h2>
+
   </div>
 
   <!-- NETWORKING -->
@@ -240,9 +208,8 @@ body::before{
 
     <p>
       Mempelajari dasar hingga menengah jaringan komputer
-      seperti IP Address, Subnetting, Routing, Switching,
-      konfigurasi Mikrotik, serta memahami komunikasi
-      antar perangkat dalam jaringan.
+      seperti IP Address, Routing, Switching, Subnetting,
+      Mikrotik, dan komunikasi antar perangkat jaringan.
     </p>
 
   </div>
@@ -253,9 +220,9 @@ body::before{
     <h3>🐧 Linux</h3>
 
     <p>
-      Memahami penggunaan Linux untuk administrasi server,
-      manajemen file, konfigurasi user, permission,
-      serta penggunaan command line untuk kebutuhan server.
+      Memahami administrasi server Linux,
+      command line, manajemen file,
+      permission, dan konfigurasi user.
     </p>
 
   </div>
@@ -266,25 +233,18 @@ body::before{
     <h3>⚡ Web Server</h3>
 
     <p>
-      Mempelajari cara membangun dan mengelola web server
-      menggunakan Apache dan Nginx, termasuk hosting website,
-      virtual host, domain, dan optimasi server.
+      Mempelajari Apache, Nginx,
+      virtual host, hosting website,
+      domain, dan optimasi performa server.
     </p>
-
-  </div>
-
-  <!-- BUTTON -->
-  <div class="github-btn">
-
-    <a href="https://github.com/kholiqudarul" target="_blank">
-      👑 Visit My Kingdom
-    </a>
 
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    Royal Developer • Kholiqu Darul 👑
+
+    github.com/kholiqudarul
+
   </div>
 
 </div>
